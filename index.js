@@ -4,3 +4,10 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+function promptUser() {
+    return inquirer.prompt([
+
+    ])
+
+    
+
