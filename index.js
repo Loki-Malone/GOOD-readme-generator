@@ -19,7 +19,6 @@ function promptUser() {
       <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <title>Document</title>
       </head>
       <body>
@@ -27,3 +26,10 @@ function promptUser() {
       </body>
       </html>`;
       }
+      
+      promptUser()
+   .then(function(prompt) {
+    const readMe = generateHTML(prompt);
+
+    return writeFileAsync("index.html", readMe);
+   });
